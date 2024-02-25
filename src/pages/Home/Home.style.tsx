@@ -184,3 +184,49 @@ export const GalleryImage = styled.img`
   width: 312px;
   height: 350px;
 `
+
+export const ContactContainer = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 24px;
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    padding: 30px 0px;
+  }
+`
+
+export const ContactContent = styled.div`
+  width: 100%;
+  max-width: 400px;
+
+  @media screen and (min-width: 1024px) {
+    max-width: 900px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    max-width: 1100px;
+  }
+`
+
+export const ContactTextGroup = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+`
+
+export const ContactTitle = styled.h1`
+  font-size: 24px;
+  font-weight: 600;
+  color: ${props => props.theme.colors.dark};
+`
+
+export const ContactDescription = styled.p`
+  text-align: center;
+  color: ${props => props.theme.colors.darkGray};
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+`

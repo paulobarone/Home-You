@@ -30,6 +30,7 @@ export const ButtonStyled = styled.button<ButtonProps>`
     color: ${props.theme.colors.dark};
     border: 1px solid ${props.theme.colors.dark};
     padding: 8px 20px;
+    background-color: transparent;
 
     @media screen and (min-width: 768px) {
       padding: 12px 32px;

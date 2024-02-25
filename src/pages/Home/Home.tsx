@@ -1,5 +1,5 @@
 import Header from "../../components/Header/Header";
-import { AboutBox, AboutContainer, AboutContent, AboutDescription, AboutTextGroup, AboutTitle, GalleryContainer, GalleryContent, GalleryDescription, GalleryImage, GalleryImages, GalleryTextGroup, GalleryTitle, MainContainer, ShowcaseButtonContainer, ShowcaseContainer, ShowcaseContent, ShowcaseDescription, ShowcaseImg, ShowcaseTextGroup, ShowcaseTitle } from "./Home.style";
+import { AboutBox, AboutContainer, AboutContent, AboutDescription, AboutTextGroup, AboutTitle, ContactContainer, ContactContent, ContactDescription, ContactTextGroup, ContactTitle, GalleryContainer, GalleryContent, GalleryDescription, GalleryImage, GalleryImages, GalleryTextGroup, GalleryTitle, MainContainer, ShowcaseButtonContainer, ShowcaseContainer, ShowcaseContent, ShowcaseDescription, ShowcaseImg, ShowcaseTextGroup, ShowcaseTitle } from "./Home.style";
 import showcaseImg from "../../assets/home-img.png";
 import Button from "../../components/Button/Button";
 import galleryImgOne from "../../assets/gallery-1.png";
@@ -48,6 +48,15 @@ export default function Home() {
             </GalleryImages>
           </GalleryContent>
         </GalleryContainer>
+        <ContactContainer>
+          <ContactContent>
+            <ContactTextGroup>
+              <ContactTitle>Orçamento</ContactTitle>
+              <ContactDescription>Interessado em entrar em contato com um de nossos profissionais?</ContactDescription>
+              <Button type="tertiary">Entre em contato</Button>
+            </ContactTextGroup>
+          </ContactContent>
+        </ContactContainer>
       </MainContainer>
     </>
   )
