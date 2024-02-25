@@ -1,100 +1,178 @@
 import styled from "styled-components";
 
-interface MenuProps {
-  $menu: boolean
-}
-
-export const Header = styled.header`
+export const MainContainer = styled.main`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 30px 24px;
-  background-color: ${props => props.theme.colors.white};
-  width: 100vw;
 `
 
-export const HeaderContent = styled.div`
+export const ShowcaseContainer = styled.section`
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  padding: 30px 24px;
   width: 100%;
+  background-color: ${props => props.theme.colors.lightGray};
 
-  @media screen and (min-width: 1024px) { 
+  @media screen and (min-width: 768px) {
+    padding: 30px 0px;
+  }
+`
+
+export const ShowcaseContent = styled.div`
+  width: 100%;
+  max-width: 400px;
+
+  @media screen and (min-width: 1024px) {
     max-width: 900px;
   }
 
-  @media screen and (min-width: 1280px) { 
+  @media screen and (min-width: 1280px) {
     max-width: 1100px;
   }
 `
 
-export const LeftSide = styled.div`
+export const ShowcaseTextGroup = styled.div`
   display: flex;
+  flex-direction: column;
+  gap: 24px;
+`
+
+export const ShowcaseTitle = styled.h1`
+  font-size: 24px;
+  font-weight: 600;
+  color: ${props => props.theme.colors.dark};
+`
+
+export const ShowcaseDescription = styled.p`
+  color: ${props => props.theme.colors.darkGray};
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+`
+
+export const ShowcaseButtonContainer = styled.div`
+  display: flex;
+  gap: 20px;
+`
+
+export const ShowcaseImg = styled.img`
+  display: none;
+  height: 100%;
+  max-width: 660px;
+
+  @media screen and (min-width: 1024px) {
+    display: block;
+  }
+`
+
+export const AboutContainer = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 24px;
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    padding: 30px 0px;
+  }
+`
+
+export const AboutContent = styled.div`
+  width: 100%;
+  max-width: 400px;
+
+  @media screen and (min-width: 1024px) {
+    max-width: 900px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    max-width: 1100px;
+  }
+`
+
+export const AboutTextGroup = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+`
+
+export const AboutBox = styled.div`
+  padding: 16px;
+  background-color: ${props => props.theme.colors.dark};
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+`
+
+export const AboutTitle = styled.h2`
+  font-size: 24px;
+  font-weight: 600;
+  color: ${props => props.theme.colors.white};
+`
+
+export const AboutDescription = styled.p`
+  font-size: 14px;
+  font-weight: 500;
+  color: ${props => props.theme.colors.white};
+`
+
+export const GalleryContainer = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 24px;
+  width: 100%;
+  background-color: ${props => props.theme.colors.lightGray};
+
+  @media screen and (min-width: 768px) {
+    padding: 30px 0px;
+  }
+`
+
+export const GalleryContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  max-width: 400px;
+
+  @media screen and (min-width: 1024px) {
+    max-width: 900px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    max-width: 1100px;
+  }
+`
+
+export const GalleryTextGroup = styled.div`
+  display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 16px;
 `
 
-export const Logo = styled.img`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 4px;
-  background-color: ${props => props.theme.colors.dark};
-`
-
-export const Name = styled.h1`
-  text-transform: uppercase;
+export const GalleryTitle = styled.h1`
   font-size: 24px;
   font-weight: 600;
+  color: ${props => props.theme.colors.dark};
 `
 
-export const RightSide = styled.div`
+export const GalleryDescription = styled.p`
+  text-align: center;
+  color: ${props => props.theme.colors.darkGray};
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+`
+
+export const GalleryImages = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 8px;
-`
-
-export const Menu = styled.img`
-  width: 24px;
-  cursor: pointer;
-
-  @media screen and (min-width: 1024px) {
-    display: none;
-  }
-`
-
-export const Nav = styled.nav<MenuProps>`
-  display: ${(props) => props.$menu ? 'flex' : 'none'};
-  flex-direction: column;
-  align-items: center;
-  gap: 48px;
-  position: absolute;
-  top: 120px;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 12px;
-  background-color: ${props => props.theme.colors.white};
-  padding: 32px 16px;
-  border: 1px solid ${props => props.theme.colors.darkGray};
-  width: 85vw;
-  max-width: 600px;
-
-  @media screen and (min-width: 1024px) {
-    display: flex;
-    flex-direction: row;
-    border: none;
-    position: static;
-    width: 100%;
-    max-width: auto;
-    transform: none;
-  }
-`
-
-export const Links = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   gap: 24px;
 
   @media screen and (min-width: 1024px) {
@@ -102,21 +180,7 @@ export const Links = styled.div`
   }
 `
 
-export const Link = styled.a`
-  color: ${props => props.theme.colors.dark};
-  font-size: 18px;
-  font-weight: 500;
-  cursor: pointer;
-`
-
-export const Icons = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-`
-
-export const Icon = styled.img`
-  width: 24px;
-  cursor: pointer;
+export const GalleryImage = styled.img`
+  width: 312px;
+  height: 350px;
 `

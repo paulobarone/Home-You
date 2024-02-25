@@ -1,50 +1,54 @@
-import { useEffect, useState } from "react";
-import menuIcon from "../../assets/menu.svg";
-import userIcon from "../../assets/user.svg";
-import favoriteIcon from "../../assets/favorite.svg";
-import searchIcon from "../../assets/search.svg";
-import logoIcon from "../../assets/logo.svg";
-import { Header, LeftSide, Logo, Menu, Name, Nav, RightSide, Links, Link, Icons, Icon, HeaderContent } from "./Home.style";
+import Header from "../../components/Header/Header";
+import { AboutBox, AboutContainer, AboutContent, AboutDescription, AboutTextGroup, AboutTitle, GalleryContainer, GalleryContent, GalleryDescription, GalleryImage, GalleryImages, GalleryTextGroup, GalleryTitle, MainContainer, ShowcaseButtonContainer, ShowcaseContainer, ShowcaseContent, ShowcaseDescription, ShowcaseImg, ShowcaseTextGroup, ShowcaseTitle } from "./Home.style";
+import showcaseImg from "../../assets/home-img.png";
+import Button from "../../components/Button/Button";
+import galleryImgOne from "../../assets/gallery-1.png";
+import galleryImgTwo from "../../assets/gallery-2.png";
+import galleryImgThree from "../../assets/gallery-3.png";
 
 export default function Home() {
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  const handleMenu = () => {
-    setMenuOpen(!menuOpen);
-  }
-
-  useEffect(() => {
-    if(menuOpen) {
-      window.scrollTo(0, 0);
-      document.body.style.overflowY = 'hidden';
-    } else {
-      document.body.style.overflowY = 'auto';
-    }
-  }, [menuOpen])
-
   return (
-    <Header>
-      <HeaderContent>
-        <LeftSide>
-          <Logo src={logoIcon} alt="Logo Home You" />
-          <Name>HomeYou</Name>
-        </LeftSide>
-        <RightSide>
-          <Menu src={menuIcon} alt="Ícone de Menu" onClick={handleMenu} />
-          <Nav $menu={menuOpen}>
-            <Links>
-              <Link>Início</Link>
-              <Link>Galeria</Link>
-              <Link>Contato</Link>
-            </Links>
-            <Icons>
-              <Icon src={userIcon} alt="Ícone de usuário" />
-              <Icon src={favoriteIcon} alt="Ícone de favorito" />
-              <Icon src={searchIcon} alt="Ícone de busca" />
-            </Icons>
-          </Nav>
-        </RightSide>
-      </HeaderContent>
-    </Header>
+    <>
+      <Header />
+      <MainContainer>
+        <ShowcaseContainer>
+          <ShowcaseContent>
+            <ShowcaseTextGroup>
+              <ShowcaseTitle>Ajudar você a encontrar o melhor conforto, é nossa prioridade.</ShowcaseTitle>
+              <ShowcaseDescription>Encontre uma variedade de propriedades que combinam com você. Esqueça todas as dificuldades em encontrar uma residência</ShowcaseDescription>
+              <ShowcaseButtonContainer>
+                <Button type="primary">Entre em contato</Button>
+                <Button type="secondary">Mais sobre nós</Button>
+              </ShowcaseButtonContainer>
+            </ShowcaseTextGroup>
+            <ShowcaseImg src={showcaseImg} alt="Casa moderna" />
+          </ShowcaseContent>
+        </ShowcaseContainer>
+        <AboutContainer>
+          <AboutContent>
+            <AboutTextGroup>
+              <AboutBox>
+                <AboutTitle>Design minimalista</AboutTitle>
+                <AboutDescription>Móveis apenas essenciais e com design moderno, além de revestimentos bonitos e em cores neutras para manter a casa sempre com um estilo clean e suave.</AboutDescription>
+              </AboutBox>
+              <Button type="secondary">Quero saber mais sobre os designs</Button>
+            </AboutTextGroup>
+          </AboutContent>
+        </AboutContainer>
+        <GalleryContainer>
+          <GalleryContent>
+            <GalleryTextGroup>
+              <GalleryTitle>Galeria</GalleryTitle>
+              <GalleryDescription>Se você está entediado com a aparência da decoração de interiores da casa comuns, trabalhamos com designs diferentes e inovadores.</GalleryDescription>
+            </GalleryTextGroup>
+            <GalleryImages>
+              <GalleryImage src={galleryImgOne} alt="Casa moderna" />
+              <GalleryImage src={galleryImgTwo} alt="Casa moderna" />
+              <GalleryImage src={galleryImgThree} alt="Casa moderna" />
+            </GalleryImages>
+          </GalleryContent>
+        </GalleryContainer>
+      </MainContainer>
+    </>
   )
 }
