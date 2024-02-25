@@ -11,20 +11,25 @@ export const ShowcaseContainer = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 30px 24px;
   width: 100%;
   background-color: ${props => props.theme.colors.lightGray};
+  padding: 30px 24px;
 
-  @media screen and (min-width: 768px) {
-    padding: 30px 0px;
+  @media screen and (min-width: 1024px) {
+    padding: 0px;
   }
 `
 
 export const ShowcaseContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   max-width: 400px;
 
   @media screen and (min-width: 1024px) {
+    flex-direction: row;
+    justify-content: space-between;
     max-width: 900px;
   }
 
@@ -37,6 +42,7 @@ export const ShowcaseTextGroup = styled.div`
   display: flex;
   flex-direction: column;
   gap: 24px;
+  max-width: 500px;
 `
 
 export const ShowcaseTitle = styled.h1`
@@ -60,6 +66,7 @@ export const ShowcaseButtonContainer = styled.div`
 export const ShowcaseImg = styled.img`
   display: none;
   height: 100%;
+  width: 50%;
   max-width: 660px;
 
   @media screen and (min-width: 1024px) {
@@ -75,20 +82,43 @@ export const AboutContainer = styled.section`
   width: 100%;
 
   @media screen and (min-width: 768px) {
-    padding: 30px 0px;
+    padding: 62px 0px 30px 0px;
   }
 `
 
 export const AboutContent = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 24px;
   width: 100%;
   max-width: 400px;
 
   @media screen and (min-width: 1024px) {
     max-width: 900px;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   @media screen and (min-width: 1280px) {
     max-width: 1100px;
+  }
+`
+
+export const AboutImg = styled.img`
+  display: none;
+  width: 350px;
+  height: 350px;
+  -webkit-box-shadow: -32px -32px 0px 0px ${props => props.theme.colors.dark};
+  -moz-box-shadow: -32px -32px 0px 0px ${props => props.theme.colors.dark};
+  box-shadow: -32px -32px 0px 0px ${props => props.theme.colors.dark};
+
+  @media screen and (min-width: 1024px) {
+    display: block;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 500px;
+    height: 500px;
   }
 `
 
@@ -97,6 +127,11 @@ export const AboutTextGroup = styled.div`
   flex-direction: column;
   gap: 16px;
   align-items: center;
+  max-width: 500px;
+
+  @media screen and (min-width: 1024px) {
+    align-items: start;
+  }
 `
 
 export const AboutBox = styled.div`
@@ -154,6 +189,7 @@ export const GalleryTextGroup = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 16px;
+  max-width: 600px;
 `
 
 export const GalleryTitle = styled.h1`
@@ -172,8 +208,11 @@ export const GalleryDescription = styled.p`
 
 export const GalleryImages = styled.div`
   display: flex;
+  width: 100%;
+  gap: 16px;
   flex-direction: column;
-  gap: 24px;
+  align-items: center;
+  justify-content: space-between;
 
   @media screen and (min-width: 1024px) {
     flex-direction: row;
@@ -181,8 +220,14 @@ export const GalleryImages = styled.div`
 `
 
 export const GalleryImage = styled.img`
-  width: 312px;
+  width: 100%;
+  max-width: 312px;
   height: 350px;
+
+  @media screen and (min-width: 1280px) {
+    width: 350px;
+    height: 550px;
+  }
 `
 
 export const ContactContainer = styled.section`

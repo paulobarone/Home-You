@@ -108,6 +108,28 @@ export const Link = styled.a`
   font-size: 18px;
   font-weight: 500;
   cursor: pointer;
+  position: relative;
+  transition: color .7s ease;
+
+  &::after {
+    content: ' ';
+    width: 0%;
+    height: 2px;
+    background-color: ${props => props.theme.colors.dark};
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    transition: width .7s ease-in-out;
+    border-radius: 10px;
+  }
+
+  &:hover {
+    color: ${props => props.theme.colors.dark};
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
 `
 
 export const Icons = styled.div`

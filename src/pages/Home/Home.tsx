@@ -1,10 +1,12 @@
 import Header from "../../components/Header/Header";
-import { AboutBox, AboutContainer, AboutContent, AboutDescription, AboutTextGroup, AboutTitle, ContactContainer, ContactContent, ContactDescription, ContactTextGroup, ContactTitle, GalleryContainer, GalleryContent, GalleryDescription, GalleryImage, GalleryImages, GalleryTextGroup, GalleryTitle, MainContainer, ShowcaseButtonContainer, ShowcaseContainer, ShowcaseContent, ShowcaseDescription, ShowcaseImg, ShowcaseTextGroup, ShowcaseTitle } from "./Home.style";
+import { AboutBox, AboutContainer, AboutContent, AboutDescription, AboutImg, AboutTextGroup, AboutTitle, ContactContainer, ContactContent, ContactDescription, ContactTextGroup, ContactTitle, GalleryContainer, GalleryContent, GalleryDescription, GalleryImage, GalleryImages, GalleryTextGroup, GalleryTitle, MainContainer, ShowcaseButtonContainer, ShowcaseContainer, ShowcaseContent, ShowcaseDescription, ShowcaseImg, ShowcaseTextGroup, ShowcaseTitle } from "./Home.style";
 import showcaseImg from "../../assets/home-img.png";
+import aboutImg from "../../assets/design-img.png"
 import Button from "../../components/Button/Button";
 import galleryImgOne from "../../assets/gallery-1.png";
 import galleryImgTwo from "../../assets/gallery-2.png";
 import galleryImgThree from "../../assets/gallery-3.png";
+import Footer from "../../components/Footer/Footer";
 
 export default function Home() {
   return (
@@ -26,6 +28,7 @@ export default function Home() {
         </ShowcaseContainer>
         <AboutContainer>
           <AboutContent>
+            <AboutImg src={aboutImg} alt="Design moderno e minimalista" />
             <AboutTextGroup>
               <AboutBox>
                 <AboutTitle>Design minimalista</AboutTitle>
@@ -58,6 +61,7 @@ export default function Home() {
           </ContactContent>
         </ContactContainer>
       </MainContainer>
+      <Footer />
     </>
   )
 }
