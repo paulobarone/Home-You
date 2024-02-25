@@ -9,7 +9,6 @@ export const HeaderContainer = styled.header`
   justify-content: center;
   align-items: center;
   background-color: ${props => props.theme.colors.white};
-  width: 100vw;
 `
 
 export const HeaderContent = styled.div`
@@ -21,7 +20,7 @@ export const HeaderContent = styled.div`
 
   @media screen and (min-width: 1024px) { 
     max-width: 900px;
-    padding: 0px;
+    padding: 30px 0px;
   }
 
   @media screen and (min-width: 1280px) { 

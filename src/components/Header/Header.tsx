@@ -33,14 +33,14 @@ export default function Header() {
           <Menu src={menuIcon} alt="Ícone de Menu" onClick={handleMenu} />
           <Nav $menu={menuOpen}>
             <Links>
-              <Link>Início</Link>
-              <Link>Galeria</Link>
-              <Link>Contato</Link>
+              <Link onClick={() => setMenuOpen(false)}>Início</Link>
+              <Link onClick={() => setMenuOpen(false)}>Galeria</Link>
+              <Link onClick={() => setMenuOpen(false)}>Contato</Link>
             </Links>
             <Icons>
-              <Icon src={userIcon} alt="Ícone de usuário" />
-              <Icon src={favoriteIcon} alt="Ícone de favorito" />
-              <Icon src={searchIcon} alt="Ícone de busca" />
+              <Icon onClick={() => setMenuOpen(false)} src={userIcon} alt="Ícone de usuário" />
+              <Icon onClick={() => setMenuOpen(false)} src={favoriteIcon} alt="Ícone de favorito" />
+              <Icon onClick={() => setMenuOpen(false)} src={searchIcon} alt="Ícone de busca" />
             </Icons>
           </Nav>
         </RightSide>
